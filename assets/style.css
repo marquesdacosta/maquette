@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* body{
+    width:1920px
+} */
+
+nav{
+    height:100px;
+    width:100%;
+    border:0.1px solid black;
+  
+}
+
+nav ul{
+    display:flex;
+    align-items:center;
+    height:100%;
+    
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li:nth-child(2){
+   margin-left: calc(calc(800 / 1920 ) * 100%);
+}
+
+nav ul li:nth-child(7){
+    
+    margin-right:calc( 73 / 1920 * 100%)
+ }
+
+nav ul li:not(li:nth-child(7)) {
+    padding-right:calc(45 / 1920 * 100%);
+}  
+
+
+nav ul li a{
+    /* font-size:calc(7px + 1vw); */
+    font-size: 5px;
+    text-decoration:none;
+    color:#4D4D4D;
+    text-transform:uppercase;
+    line-height:100px;
+    font-family: 'Asap', sans-serif;
+    /* width:54.5833333333% */
+    width:calc(1048 / 1920 * 100%)
+
+}
+
+ul {
+    padding-left:calc(80 / 1920 * 100%);
+} 
+
+
+
+/* nav ul li:nth-child(2){
+    margin-left: 34.114833333%;
+} */
+
+/* nav{
+    height:100px;
+    width:100%;
+    border:0.1px solid black;
+}
+
+nav ul{
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+
+nav ul li{
+ 
+    list-style-type:none;
+   
+}
+
+nav ul li:nth-child(2){
+    margin-left: 34.114833333%;
+}
+
+nav ul li:nth-child(7){
+    margin-right:3.80208333333%;
+    /* margin-right:73px; */
+    /* margin-right:calc( 73px / 1920px * 100) */
+/* }
+
+nav ul li:not(li:nth-child(7)) {
+    margin-right:2.29166666667%;
+}
+
+nav ul li a{
+    /* font-size:calc(7px + 1vw); */
+    /* font-size: calc(20px * (100vw / 1920px));
+    text-decoration:none;
+    color:#4D4D4D;
+    text-transform:uppercase;
+    line-height:100px;
+    font-family: 'Asap', sans-serif; */
+    /* width:54.5833333333% */
+/*   
+}
+
+ul {
+    padding-left:4.16666666667%;
+}  */
+
+
