@@ -1,9 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Lobster&display=swap');
+
+
+:root{
+    --variableLargeur:1920;
+    --hauteurDiaporama:943;
+    --valeurViewport:100vw;
+    --premiereFontFamily:'Asap', sans-serif;
+    --deuxiemeFontFamily:'Cinzel Decorative';
+    --troisiemeFontFamily:'Asap Condensed', sans-serif;
+    --quatriemeFontFamily:'Asap Condensed', sans-serif;
+    --cinquiemeFontFamily:'Asap', sans-serif;
+    --fontSiza20px:calc(20 * 100vw / 1920);
+    --PremiereCouleurTexte:#ffffff;
+ 
+}
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    /* overflow:hidden; */
 }
 
 /* body{
@@ -11,9 +31,10 @@
 } */
 
 nav{
-    height:100px;
+    /* height:100px; */
+    height:calc(100 * var(--valeurViewport) / 1920) ;
     width:100%;
-    border:0.1px solid black;
+   
   
 }
 
@@ -29,88 +50,226 @@ nav ul li{
 }
 
 nav ul li:nth-child(2){
-   margin-left: calc(calc(800 / 1920 ) * 100%);
+    /* margin-left:calc(800 / var(--variableLargeur)  * 100%); */
+    margin-left:auto;
+  
+   
 }
+
+nav ul li svg{
+    width:calc(65 * 100vw / 1920);
+    height:auto;
+}
+
+
 
 nav ul li:nth-child(7){
     
-    margin-right:calc( 73 / 1920 * 100%)
+    margin-right:calc( 73 / var(--variableLargeur) * 100%) ;
+    /* margin-right:calc(73 * 100vw / 1920); */
+  
  }
 
 nav ul li:not(li:nth-child(7)) {
-    padding-right:calc(45 / 1920 * 100%);
+    padding-right:calc(45 / var(--variableLargeur) * 100%) ;
 }  
 
 
 nav ul li a{
     /* font-size:calc(7px + 1vw); */
-    font-size: 5px;
+    font-size:var(--fontSiza20px);
+    /* font-size:20px; */
     text-decoration:none;
     color:#4D4D4D;
     text-transform:uppercase;
     line-height:100px;
-    font-family: 'Asap', sans-serif;
+    font-family:var(--premiereFontFamily);
     /* width:54.5833333333% */
-    width:calc(1048 / 1920 * 100%)
+    width:clamp(calc(1048 / var(--variableLargeur) * 100%));
+    white-space : nowrap
 
 }
 
 ul {
-    padding-left:calc(80 / 1920 * 100%);
+    padding-left:calc(80 / var(--variableLargeur) * 100%);
 } 
 
-
-
-/* nav ul li:nth-child(2){
-    margin-left: 34.114833333%;
-} */
-
-/* nav{
-    height:100px;
-    width:100%;
-    border:0.1px solid black;
+.containerDiapo1{
+    position:relative;
+    
 }
 
-nav ul{
-    display:flex;
-    align-items:center;
-    width:100%;
+.containerHeaderImage .diaporamaImage{
+    /* height:var(--hauteurDiaporama); */
+    object-fit: cover;
 }
 
-nav ul li{
- 
-    list-style-type:none;
+.diaporamaImage{
+    width:100%;
+    height:100%;
+  
+}
+
+.containerH2DiaporamaImage{
+    top:calc(286 / var(--hauteurDiaporama) * 100%);
+    height:calc(158 / var(--hauteurDiaporama) * 100%);
+    position:absolute;
+    left:50%;
+
+    transform:translateX(-50%);
+    z-index:2;
+    width:calc(1128 / var(--variableLargeur) * 100%);
+   
    
 }
 
-nav ul li:nth-child(2){
-    margin-left: 34.114833333%;
+.containerDiapo1 h2{
+   
+   
+    font: normal normal normal;
+    font-weight: 400;
+    font-size:calc(117 * 100vw / 1920);
+   
+      
+    /* line-height:70px; */
+    color:var(--PremiereCouleurTexte);
+    font-family:var(--deuxiemeFontFamily);
+    white-space:nowrap;
+    /* font:normal normal normal 117px/70px Cinzel Decorative; */
+    text-shadow: 10px 10px 20px #00000029;
+    /* letter-spacing:2px; */
 }
 
-nav ul li:nth-child(7){
-    margin-right:3.80208333333%;
-    /* margin-right:73px; */
-    /* margin-right:calc( 73px / 1920px * 100) */
-/* }
 
-nav ul li:not(li:nth-child(7)) {
-    margin-right:2.29166666667%;
+.containerPresentationDiaporamaImage{
+    position:absolute;
+    top:calc(438 / var(--hauteurDiaporama) * 100%);
+    left:calc(541 / var(--variableLargeur) * 100%);
+    width:calc(830 * var(--valeurViewport) / var(--variableLargeur))
+   
+    /* font-size:29px */
 }
 
-nav ul li a{
-    /* font-size:calc(7px + 1vw); */
-    /* font-size: calc(20px * (100vw / 1920px));
-    text-decoration:none;
-    color:#4D4D4D;
+.containerPresentationDiaporamaImage p{
+    color:var(--PremiereCouleurTexte);
+    font-size:calc(29 * var(--valeurViewport)/ var(--variableLargeur));
+    text-align:center;
+    font-family:var(--premiereFontFamily)
+    
+}
+
+.containerPlanDEauDiaporamaImage{
+    position:absolute;
+    width:calc(89 * var(--valeurViewport) / var(--variableLargeur));
+    left:calc(928 * var(--valeurViewport) / var(--variableLargeur));
+    top:calc(628 / var(--hauteurDiaporama) * 100%);
+    height:calc(43 / var(--hauteurDiaporama) * 100%);
+   
+
+}
+
+.containerPlanDEauDiaporamaImage p{
+    font-family:var(--troisiemeFontFamily);
     text-transform:uppercase;
-    line-height:100px;
-    font-family: 'Asap', sans-serif; */
-    /* width:54.5833333333% */
-/*   
+    color:var(--PremiereCouleurTexte);
+    font-size:var(--fontSiza20px);
+    line-height:calc(20 * var(--valeurViewport) / var(--variableLargeur));
+
 }
 
-ul {
-    padding-left:4.16666666667%;
-}  */
+.containerNomVilleDiaporamaImage{
+    position:absolute;
+    left:calc(928 * var(--valeurViewport) / var(--variableLargeur));
+    top:calc(671 / var(--hauteurDiaporama) * 100%);
+    width:calc(119 * var(--valeurViewport)/ var(--variableLargeur));
+    height:calc(14 / var(--hauteurDiaporama) * 100%);
+   
 
+}
+
+.containerNomVilleDiaporamaImage p{
+    color:var(--PremiereCouleurTexte);
+    font-size:calc(14 * var(--valeurViewport) / var(--variableLargeur));
+    font-family:'Asap Condensed', sans-serif;
+    letter-spacing:calc(1.2px * var(--valeurViewport) / var(--variableLargeur));
+}
+
+.containerComplementInformationDiaporamaImage{
+    position:absolute;
+    width:calc(470 * var(--valeurViewport) / var(--variableLargeur));
+    top:calc(700/ var(--hauteurDiaporama) * 100%);
+    /* height:calc(62 / var(--hauteurDiaporama) * 100%); */
+    left:50%;
+    transform:translatex(-50%);
+}
+
+.containerComplementInformationDiaporamaImage p{
+    text-align:center;
+    color:var(--PremiereCouleurTexte);
+    font-size:calc(16 * var(--valeurViewport) / var(--variableLargeur));
+    line-height:calc(22 * var(--valeurViewport) / var(--variableLargeur));
+    font-family:var(--premiereFontFamily)
+}
+
+.containerComplementInformationDiaporamaImage p:nth-child(1){
+    font-family:var(--cinquiemeFontFamily);
+    font-weight:bold;
+   
+}
+
+.containerComplementInformationDiaporamaImage p:nth-child(1),.containerComplementInformationDiaporamaImage p:nth-child(2){
+    line-height:calc(22 * var(--valeurViewport) / var(--variableLargeur));
+}
+
+.containerBoutonDiaporamaImage{
+    position:absolute;
+    left:calc(906 * var(--valeurViewport) / var(--variableLargeur));
+    top:calc(790 / var(--hauteurDiaporama) * 100%);
+    width:calc(152 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(50 / var(--hauteurDiaporama) * 100%)
+}
+
+.containerBoutonDiaporamaImage button{
+    width:100%;
+    height:100%;
+    color:var(--PremiereCouleurTexte);
+    background-color:transparent;
+    box-shadow: none;
+    border:1px solid var(--PremiereCouleurTexte);
+    font-family:var(--premiereFontFamily);
+    font-size:var(--fontSiza20px);
+    cursor:pointer;
+}
+
+.containerSvgFlecheGaucheDiaporamaImage{
+    position:absolute;
+    left:calc(1584 * var(--valeurViewport) / var(--variableLargeur));
+    top:calc(817.5 / var(--hauteurDiaporama) * 100%);
+    width:calc(52 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(52 / var(--hauteurDiaporama) * 100%)
+}
+
+.containerSvgFlecheGaucheDiaporamaImage svg{
+    width:100%;
+    height:100%;
+    /* border: 1px solid var(--PremiereCouleurTexte);
+    border-radius:50%; */
+}
+
+.containerSvgFlecheDroiteDiaporamaImage{
+    position:absolute;
+    left:calc(1649 * var(--valeurViewport) / var(--variableLargeur));
+    top:calc(817.5 / var(--hauteurDiaporama) * 100%);
+    width:calc(52 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(52 / var(--hauteurDiaporama) * 100%)
+}
+
+.containerSvgFlecheDroiteDiaporamaImage svg{
+    width:100%;
+    height:100%;
+    /* color:var(--PremiereCouleurTexte);
+    border: 1px solid var(--PremiereCouleurTexte);
+    border-radius:50%; */
+    /*#4d4d4d*/
+}
 
