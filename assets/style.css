@@ -13,6 +13,7 @@
     --hauteurCarte:1068;
     --hauteurActualites:896;
     --hauteurBlog:675;
+    --hauteurSponsor:202;
     --valeurViewport:100vw;
     --premiereFontFamily:'Asap', sans-serif;
     --deuxiemeFontFamily:'Cinzel Decorative';
@@ -999,3 +1000,64 @@ ul {
     font-size:calc(24 * var(--valeurViewport) / var(--variableLargeur));
     line-height:calc(37 * var(--valeurViewport) /var(--variableLargeur));
 }
+
+
+/*------------------------------------------Sponsor ------------------------------------------*/
+
+.containerSponsor{
+    height: calc(var(--hauteurSponsor) * var(--valeurViewport) / 1920);
+    position:relative;
+   
+}
+
+.containerToutesLesSvg{
+    display:flex;
+    width:calc(1718 * var(--valeurViewport)/ var(--variableLargeur));
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+    gap:calc(58.08 * var(--valeurViewport) / var(--variableLargeur))
+}
+
+.logo1Sponsor,.logoFlecheDroite{
+    width:calc(52 * var(--valeurViewport)/ var(--variableLargeur));
+    height:calc(52 * var(--valeurViewport)/ var(--variableLargeur));
+}
+
+.logo2SponsorPeche{
+    width:calc(84 * var(--valeurViewport)/ var(--variableLargeur));
+    height:calc(106 * var(--valeurViewport)/ var(--variableLargeur));
+
+}
+
+.logo3SponsorDecathlon{
+    width:calc(257.02 * var(--valeurViewport)/ var(--variableLargeur));
+    height:calc(63.92 * var(--valeurViewport)/ var(--variableLargeur));
+}
+
+.logo4Mitchell{
+    width:calc(158 * var(--valeurViewport)/ var(--variableLargeur));
+    height:calc(59.38 * var(--valeurViewport)/ var(--variableLargeur));
+}
+
+.logo5Dawa{
+    width:calc(180.3 * var(--valeurViewport)/ var(--variableLargeur));
+    height:calc(26.268 * var(--valeurViewport)/ var(--variableLargeur));
+}
+
+.logo6Shimano{
+    width:calc(183.034 * var(--valeurViewport)/ var(--variableLargeur));
+    height:calc(45.092 * var(--valeurViewport)/ var(--variableLargeur));
+}
+
+.logo7AbuGarcia{
+    width:calc(131.919 * var(--valeurViewport)/ var(--variableLargeur));
+    height:calc(60.077 * var(--valeurViewport)/ var(--variableLargeur));
+}
+
+.logo8NRK{
+    width:calc(120.637 * var(--valeurViewport)/ var(--variableLargeur));
+    height:calc(43.216 * var(--valeurViewport)/ var(--variableLargeur));
+}
+
