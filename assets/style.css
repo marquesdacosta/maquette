@@ -9,6 +9,8 @@
     --variableLargeur:1920;
     --hauteurDiaporama:943;
     --hauteurQuiSommesNous:457.5;
+    --hauteurPechesTypes:784;
+    --hauteurCarte:1068;
     --valeurViewport:100vw;
     --premiereFontFamily:'Asap', sans-serif;
     --deuxiemeFontFamily:'Cinzel Decorative';
@@ -17,6 +19,9 @@
     --cinquiemeFontFamily:'Asap', sans-serif;
     --fontSiza20px:calc(20 * 100vw / 1920);
     --PremiereCouleurTexte:#ffffff;
+    --deuxiemeCouleurTexte:#4D4D4D;
+    --troisiemeCouleurTexte:#938A56;
+    --backgroundColor1:#F8F5EF;
  
 }
 
@@ -81,7 +86,7 @@ nav ul li a{
     font-size:var(--fontSiza20px);
     /* font-size:20px; */
     text-decoration:none;
-    color:#4D4D4D;
+    color:var(--deuxiemeCouleurTexte);
     text-transform:uppercase;
     line-height:100px;
     font-family:var(--premiereFontFamily);
@@ -95,7 +100,13 @@ ul {
     padding-left:calc(80 / var(--variableLargeur) * 100%);
 } 
 
+.containerHeaderImage{
+    /* height:100%; */
+    height: calc(var(--hauteurDiaporama) * var(--valeurViewport) / 1920);
+}
+
 .containerDiapo1{
+    height:100%;
     position:relative;
     
 }
@@ -104,7 +115,7 @@ ul {
     /* height:var(--hauteurDiaporama); */
     object-fit: cover;
     width:100%;
-    height:100%;
+   
 }
 
 /* .diaporamaImage{
@@ -329,7 +340,7 @@ ul {
     font-size:calc(30 * var(--valeurViewport) / var(--variableLargeur));
     /* line-height:calc(72 * var(--valeurViewport) / var(--variableLargeur)); */
     margin-bottom:calc(14.5 * var(--valeurViewport) / var(--variableLargeur));
-    color:#938A56;
+    color:var(--troisiemeCouleurTexte);
 }
 
 .containerTraitEtChiffreADroiteDiaporamaImage .chiffre3{
@@ -379,21 +390,374 @@ ul {
 
 /*-------------------------------Qui Sommes nous-------------------------------*/
 
+
 .containerQuiSommesNous{
     /* height:457.5px; */
     background-color:#F0EDE9;
+    display:flex;
+    justify-content:center;
+    height: calc(var(--hauteurQuiSommesNous) * var(--valeurViewport) / 1920);
+    position:relative
 }
 
 .titreQuiSommesNous {
-    padding-top:calc(62 / var(--hauteurQuiSommesNous) * 100%);
-    padding-left:calc(694 * var(--valeurViewport) / var(--variableLargeur));
-   
+    position:absolute;
+    top:calc(62 / var(--hauteurQuiSommesNous) * 100%);
+    left:calc(600 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(712 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(99 / var(--hauteurQuiSommesNous) * 100%);
+  
+    /* margin:auto; */
 }
 
 .titreQuiSommesNous h2{
+   
     font-size:calc(50 * var(--valeurViewport) / var(--variableLargeur));
     font-family:var(--deuxiemeFontFamily);
     font-weight:400;
     text-shadow: 10px 10px 20px #00000029;
-    line-height:calc(70 * var(--valeurViewport) / var(--variableLargeur))
+    line-height:calc(70 * var(--valeurViewport) / var(--variableLargeur));
+    white-space: nowrap;
+
+    text-align:center;
+    
+  
+    color: var(--deuxiemeCouleurTexte)
+    /* padding-left:calc(694 * var(--valeurViewport) / var(--variableLargeur)); */
 }
+
+.titreQuiSommesNous p{
+    font-size:var(--fontSiza20px);
+    font-family:var(--premiereFontFamily);
+    font-weight:400;
+    line-height:calc(38 * var(--valeurViewport) / var(--variableLargeur));
+    white-space: nowrap;
+    color:var(--troisiemeCouleurTexte);
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing: calc(6 * var(--valeurViewport) / var(--variableLargeur));
+  
+}
+
+.paragrapheQuiSommesNous{
+    position:absolute;
+    top:calc(223 / var(--hauteurQuiSommesNous) * 100%);
+    left:calc(392 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(1128 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(74 / var(--hauteurQuiSommesNous) * 100%);
+ 
+}
+
+.paragrapheQuiSommesNous p{
+    font-size:var(--fontSiza20px);
+    font-family:var(--premiereFontFamily);
+    line-height:calc(23 * var(--valeurViewport) / var(--variableLargeur));
+    color:var(--deuxiemeCouleurTexte);
+    text-align:center;
+  
+}
+
+.boutonQuiSommesNous{
+    position:absolute;
+    /* left:calc(906 * var(--valeurViewport) / var(--variableLargeur));
+    top:calc(342 / var(--hauteurQuiSommesNous) * 100%); */
+    width:calc(152 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(50 / var(--hauteurQuiSommesNous) * 100%);
+    margin-top: calc(330 * var(--valeurViewport) / var(--variableLargeur));
+  
+}
+
+.boutonQuiSommesNous button{
+    width:100%;
+    height:100%;
+    color:var(--troisiemeCouleurTexte);
+    background-color:transparent;
+    box-shadow: none;
+    border:1px solid var(--troisiemeCouleurTexte);
+    font-family:var(--premiereFontFamily);
+    font-size:var(--fontSiza20px);
+    cursor:pointer;
+}
+
+.pechesTypes{
+    height: calc(var(--hauteurPechesTypes) * var(--valeurViewport) / var(--variableLargeur));
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:calc(38 * var(--valeurViewport) / var(--variableLargeur));
+
+
+}
+
+
+.pechesTypes .image{
+    height: calc(624 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(411 * var(--valeurViewport) / var(--variableLargeur));
+    position:relative;
+     
+}
+
+.pechesTypes .image img{
+    /* height: calc(542 * var(--valeurViewport) / var(--variableLargeur)); */
+    
+    width:100%;
+    object-fit: cover;
+   
+}
+
+.pechesTypes .image .presentation{
+    height: calc(160 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(368 * var(--valeurViewport) / var(--variableLargeur));
+  
+    position:absolute;
+    background-color: var(--backgroundColor1);
+    left:50%;
+    transform:translate(-50%,-50%);
+  
+    /* top:calc(464 * var(--valeurViewport) / var(--variableLargeur));
+    left: calc(22 * var(--valeurViewport) / var(--variableLargeur)); */
+
+}
+
+
+
+.pechesTypes .image .presentation h3{
+    position:absolute;
+    color:var(--troisiemeCouleurTexte);
+    font-size:calc(30 * var(--valeurViewport) / var(--variableLargeur));
+    font-family:var(--deuxiemeFontFamily);
+    top:calc(40 * var(--valeurViewport) / var(--variableLargeur));
+    left:calc(40 * var(--valeurViewport) / var(--variableLargeur));
+  
+}
+
+.pechesTypes .image .presentation h3 p{
+    color:var(--deuxiemeCouleurTexte);
+    font-size:var(--fontSiza20px);
+    font-family:var(--premiereFontFamily);
+    font-weight:400;
+    white-space: nowrap;
+    line-height:calc(23 * var(--valeurViewport) / var(--variableLargeur))
+}
+
+
+
+/*------------------------------Carte-----------------------*/
+
+.containerCarte{
+    /* height:457.5px; */
+    background-color:var(--troisiemeCouleurTexte);
+    /* background-image:url(img/visuel_fond_carte.png);
+    background-size: cover; */
+ 
+    height: calc(var(--hauteurCarte) * var(--valeurViewport) / 1920);
+    position:relative;
+    /* display: flex;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    width:100%; */
+   
+    
+}
+
+.containerDroit{
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center; */
+   position:relative;
+    height:100%;
+}
+
+.containerCarte .BoutonVoirGoogleMap
+{
+    position:absolute;
+    top:calc(923 * var(--valeurViewport) / var(--variableLargeur));
+    right:calc(82 * var(--valeurViewport) / var(--variableLargeur) );
+    width:calc(236 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(50 * var(--valeurViewport) / var(--variableLargeur));
+}
+
+.containerCarte .BoutonVoirGoogleMap button{
+    width:100%;
+    height:100%;
+    color:var(--PremiereCouleurTexte);
+    background-color:transparent;
+    box-shadow: none;
+    border:1px solid var(--PremiereCouleurTexte);
+    font-family:var(--premiereFontFamily);
+    font-size:var(--fontSiza20px);
+    cursor:pointer;
+    font-weight:normal;
+}
+
+.containerDroit img{
+    object-fit: cover;
+    top:calc(75.7  * var(--valeurViewport) / var(--variableLargeur));
+    left:calc(1032.42 * var(--valeurViewport) / var(--variableLargeur));
+    height: 100%;
+
+}
+
+.blocDeGauche{
+    position:absolute;
+    top:calc(51  * var(--valeurViewport) / var(--variableLargeur));
+    left:calc(81 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(890 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(942.15 / var(--hauteurCarte) * 100%);
+ 
+   
+}
+
+
+.containerCarte .carteDeFrance {
+    display:flex;
+    justify-content:center;
+
+}
+
+.containerCarte .carteDeFrance svg{
+    width:calc(304 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(304 / var(--hauteurCarte) / var(--variableLargeur));
+
+}
+
+.containerCarte .explication{
+    margin-top:calc(7.01 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(624 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(125 * var(--valeurViewport) / var(--variableLargeur)); 
+    margin:auto;
+  
+  
+}
+
+.containerCarte .explication h3{
+    font-family:var(--deuxiemeFontFamily);
+    font-weight:bold;
+    font-size:calc(26 * var(--valeurViewport) / var(--variableLargeur));
+    text-align:center;
+    color:var(--PremiereCouleurTexte);
+    line-height:calc(30px * var(--valeurViewport) / var(--variableLargeur));
+}
+
+.containerCarte .explication p{
+    font-family:var(--premiereFontFamily);
+    font-weight:400;
+    color:var(--PremiereCouleurTexte);
+    text-align:center;
+    /* font-size:calc(26 * var(--valeurViewport) / var(--variableLargeur)); */
+    line-height:calc(30px * var(--valeurViewport) / var(--variableLargeur));
+    font-size:calc(26 * var(--valeurViewport) / var(--variableLargeur)); 
+   
+}
+
+.containerCarte .logo {
+    display:flex;
+    justify-content:center
+}
+
+.containerCarte .logo svg{
+    /* margin:auto;
+    width:100%; */
+    margin-top:calc(26.33 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(123.609 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(142.728 * var(--valeurViewport) / var(--variableLargeur));
+}
+
+.containerCarte .imageLieu{
+    margin-top:calc(67.93 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(879.23 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(269.1 * var(--valeurViewport) / var(--variableLargeur));
+    box-shadow: 20px 20px 40px #00000019;
+    position:relative;
+    
+
+}
+
+.containerCarte .imageLieu img{
+    /* width:100.7%;
+    height:100.7%; */
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    box-shadow: 20px 20px 40px #00000019;
+    /* border:1px solid var(--PremiereCouleurTexte) */
+
+}
+
+.containerCarte .imageLieu .texte{
+    position:absolute;
+    top:calc(44.12 * var(--valeurViewport) / var(--variableLargeur));
+    left:calc(48.69 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(490 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(174 * var(--valeurViewport) / var(--variableLargeur))
+}
+
+.containerCarte .imageLieu .texte h3{
+    font-family:var(--premiereFontFamily);
+    font-size:calc(21 * var(--valeurViewport) / var(--variableLargeur));
+    font-weight:bold;
+    color:var(--deuxiemeCouleurTexte);
+    line-height: calc(22 * var(--valeurViewport)/ var(--variableLargeur));
+}
+
+.containerCarte .imageLieu .texte p{
+    font-family:var(--premiereFontFamily);
+    font-size:calc(16 * var(--valeurViewport) / var(--variableLargeur));
+    color:var(--deuxiemeCouleurTexte);
+    line-height: calc(22 * var(--valeurViewport)/ var(--variableLargeur));
+}
+
+.containerCarte .imageLieu .divBouton{
+    position:absolute;
+    left:calc(707 * var(--valeurViewport) / var(--variableLargeur));
+    top:calc(199 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(152 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(50 * var(--valeurViewport) / var(--variableLargeur))
+}
+
+.containerCarte .imageLieu .divBouton button{
+    width:100%;
+    height:100%;
+    color:var(--PremiereCouleurTexte);
+    background-color:transparent;
+    box-shadow: none;
+    border:1px solid var(--PremiereCouleurTexte);
+    font-family:var(--premiereFontFamily);
+    font-size:var(--fontSiza20px);
+    cursor:pointer;
+    font-weight:normal;
+    /* line-height: calc(48 * var(--valeurViewport)/ var(--variableLargeur)); */
+    /* white-space: nowrap; */
+}
+
+.containerCarte .imageLieu  .divFleche{
+    position:absolute;
+    right:calc(21 * var(--valeurViewport) / var(--variableLargeur));
+    top:calc(28.46 * var(--valeurViewport) / var(--variableLargeur));
+    width:calc(51.5 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(39.532 * var(--valeurViewport) / var(--variableLargeur))
+}
+
+.containerCarte .BoutonVoirGoogleMap
+{
+    position:absolute;
+    top:calc(923 * var(--valeurViewport) / var(--variableLargeur));
+    right:calc(82 * var(--valeurViewport) / var(--variableLargeur) );
+    width:calc(236 * var(--valeurViewport) / var(--variableLargeur));
+    height:calc(50 * var(--valeurViewport) / var(--variableLargeur));
+}
+
+.containerCarte .BoutonVoirGoogleMap button{
+    width:100%;
+    height:100%;
+    color:var(--PremiereCouleurTexte);
+    background-color:transparent;
+    box-shadow: none;
+    border:1px solid var(--PremiereCouleurTexte);
+    font-family:var(--premiereFontFamily);
+    font-size:var(--fontSiza20px);
+    cursor:pointer;
+    font-weight:normal;
+}
+
+
