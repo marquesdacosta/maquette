@@ -52,7 +52,7 @@ nav{
     /* height:100px; */
     height:calc(100 * var(--valeurViewport) / 1920) ;
     width:100%;
-    position:fixed;
+    position:sticky;
     top:0;
     left:0;
     z-index:6;
@@ -1406,4 +1406,10 @@ ul {
 .svgAyalineFooter2{
     width:calc(57.5 * var(--valeurViewport) / var(--variableLargeur) );
     height:calc(13.18 * var(--valeurViewport) / var(--variableLargeur) );
+}
+
+/*----------------Media queries --------------------------*/
+
+@media screen and (max-width:700px){
+
 }
