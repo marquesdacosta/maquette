@@ -259,7 +259,9 @@ ul {
 
 .containerBoutonDiaporamaImage{
     position:absolute;
-    left:calc(906 * var(--valeurViewport) / var(--variableLargeur));
+    /* left:calc(884 * var(--valeurViewport) / var(--variableLargeur)); */
+    left: 50%;
+    transform: translateX(-50%);
     top:calc(790 / var(--hauteurDiaporama) * 100%);
     width:calc(152 * var(--valeurViewport) / var(--variableLargeur));
     height:calc(50 / var(--hauteurDiaporama) * 100%)
