@@ -15,6 +15,7 @@
     --hauteurBlog:675;
     --hauteurSponsor:202;
     --hauteurFooter1:338.77;
+    --hauteurFooter2:47.34;
     --valeurViewport:100vw;
     --premiereFontFamily:'Asap', sans-serif;
     --deuxiemeFontFamily:'Cinzel Decorative';
@@ -31,6 +32,7 @@
     --background-color2:#F0EDE9;
     --backgroundColor4:#222222;
     --backgroundColor3:#333B1F;
+    --backgroundColor5:#000000;
    
  
 }
@@ -1369,4 +1371,37 @@ ul {
     position:absolute;
     width:100%;
     height:100%;
+}
+
+/*--------------------------------------------------Footer 2 ---------------------------------------------*/
+
+.containerFooter2{
+    background-color:var(--backgroundColor5);
+  
+    height: calc(var(--hauteurFooter2) * var(--valeurViewport) / var(--variableLargeur));
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:calc(17.6 * var(--valeurViewport) / var(--variableLargeur))
+}
+
+.containerFooter2 p{
+    color:var(--background-color2)
+}
+
+.containerFooter2 p{
+    font-size:calc(13 * var(--valeurViewport) / var(--variableLargeur) )
+}
+.containerFooter2 span{
+    display:block;
+    width:calc(1 * var(--valeurViewport) / var(--variableLargeur) );
+    height:calc(23 * var(--valeurViewport) / var(--variableLargeur) );
+    background-color: #FFFFFF41;
+
+}
+
+.svgAyalineFooter2{
+    width:calc(57.5 * var(--valeurViewport) / var(--variableLargeur) );
+    height:calc(13.18 * var(--valeurViewport) / var(--variableLargeur) );
 }
