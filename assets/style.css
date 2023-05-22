@@ -825,7 +825,25 @@ ul {
     font-weight:normal;
     /* line-height: calc(48 * var(--valeurViewport)/ var(--variableLargeur)); */
     /* white-space: nowrap; */
+    position:relative;
 }
+
+/* .containerCarte .imageLieu .divBouton button:before{
+    content:"EN SAVOIR +";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:var(--PremiereCouleurTexte);
+    transform:translateX(-100%);
+    transition:transform 0.5s
+
+}
+
+.containerCarte .imageLieu .divBouton button:hover:before{
+    transform:translateX(0)
+} */
 
 .containerCarte .imageLieu  .divFleche{
     position:absolute;
@@ -1058,6 +1076,7 @@ ul {
 }
 
 .containerBoutonBlog button{
+    position:absolute;
     width:100%;
     height:100%;
     color:var(--PremiereCouleurTexte);
