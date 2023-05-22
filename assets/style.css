@@ -812,7 +812,7 @@ ul {
 }
 
 .containerCarte .imageLieu .divBouton button{
-    position:absolute !important;
+    position:absolute ;
     width:100%;
     height:100%;
     color:var(--PremiereCouleurTexte);
@@ -825,7 +825,7 @@ ul {
     font-weight:normal;
     /* line-height: calc(48 * var(--valeurViewport)/ var(--variableLargeur)); */
     /* white-space: nowrap; */
-    position:relative;
+
 }
 
 /* .containerCarte .imageLieu .divBouton button:before{
