@@ -114,8 +114,28 @@ nav ul li a{
     font-family:var(--premiereFontFamily);
     /* width:54.5833333333% */
     width:clamp(calc(1048 / var(--variableLargeur) * 100%));
-    white-space : nowrap
+    white-space : nowrap;
+    position:relative;
 
+}
+nav ul li a:before{
+    content:"";
+    position:absolute;
+    top:0 ;
+    left:0%;
+    width:0%;
+    height:100%;
+    border-bottom:2px solid var(--deuxiemeCouleurTexte);
+    transition:width 0.5s;
+  
+  
+    
+}
+
+nav ul li a:hover:before{
+    left:0;
+    width:100%;
+    
 }
 
 ul {
@@ -277,7 +297,33 @@ ul {
     font-family:var(--premiereFontFamily);
     font-size:var(--fontSiza20px);
     cursor:pointer;
+    position:relative;
+    transition:color 0.5s;
+    overflow: hidden;
 }
+
+.containerBoutonDiaporamaImage button:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform:translateX(-100%);
+    background-color: var(--PremiereCouleurTexte);
+    transition:transform 0.5s;
+    z-index:-1;
+}
+
+.containerBoutonDiaporamaImage button:hover:before{
+    transform:translateX(0%);
+}
+
+.containerBoutonDiaporamaImage button:hover{
+    color:var(--deuxiemeCouleurTexte)
+}
+
+
 
 .containerSvgFlecheGaucheDiaporamaImage{
     position:absolute;
