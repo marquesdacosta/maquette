@@ -547,7 +547,37 @@ ul {
     font-family:var(--premiereFontFamily);
     font-size:var(--fontSiza20px);
     cursor:pointer;
+    position:relative;
+    overflow:hidden;
 }
+
+.boutonQuiSommesNous button:before{
+    content:"EN SAVOIR +";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform:translateX(-100%);
+    /* z-index:-1; */
+    background-color:var(--troisiemeCouleurTexte);
+    transition:transform 0.5s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform: translateX(-50%,-50%);
+}
+/* 
+.boutonQuiSommesNous button:hover:before{
+   
+    transform:translateX(0);
+}
+
+.boutonQuiSommesNous button:hover{
+   
+    color:transparent;
+    color:var(--deuxiemeCouleurTexte)
+} */
 
 .pechesTypes{
     height: calc(var(--hauteurPechesTypes) * var(--valeurViewport) / var(--variableLargeur));
