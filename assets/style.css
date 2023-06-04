@@ -1525,7 +1525,7 @@ ul {
 /*----------------Media queries --------------------------*/
 
 
-@media screen and (max-width:390px){
+/* @media screen and (max-width:390px){
 
     :root{
         --variableLargeur:390;
@@ -1534,6 +1534,9 @@ ul {
         --hauteurPechesTypes:604.45;
         --hauteurCarte:1596;
     }
+   
+
+
 
     nav ul li a{
         display:none;
@@ -1552,7 +1555,7 @@ ul {
     nav ul li svg{
         width:calc(84 * 100vw / var(--variableLargeur));
         height:calc(70 * 100vw / var(--variableLargeur));
-        /* left:calc(19 * var(--valeurViewport) / var(--variableLargeur)); */
+    
     }
 
     ul {
@@ -1566,7 +1569,7 @@ ul {
 
     .containerMenuHamberger{
         position:absolute;
-        /* top:0; */
+      
         top:calc(40 * var(--valeurViewport) / var(--variableLargeur));
         left:calc(338.31 * var(--valeurViewport) / var(--variableLargeur));
         width:calc(21.69 * var(--valeurViewport) / var(--variableLargeur));
@@ -1596,24 +1599,19 @@ ul {
         width:100%;
         height:calc(4 * var(--valeurViewport) / var(--variableLargeur));
         background-color:var(--backgroundColor4);
-    }
-
-    /************************** DIAPO ********************/
-    .containerHeaderImage{
-        /* height:100%; */
-        height: calc(var(--hauteurDiaporama) * var(--valeurViewport) / var(--variableLargeur));
-        /* top: calc(100 * var(--valeurViewport) / var(--variableLargeur)); */
-       
-       /* overflow-x:hidden; */
-      
-    }
-
-    /* .containerDiapo1{
-        background-image: url("img/visu_diaporama1@2x.png");
-        background-size: cover;
     } */
 
-    .containerDiapo1{
+    /************************** DIAPO ********************/
+    /* .containerHeaderImage{
+       
+        height: calc(var(--hauteurDiaporama) * var(--valeurViewport) / var(--variableLargeur));
+     
+      
+    } */
+
+  
+
+    /* .containerDiapo1{
         height: calc(715 * var(--valeurViewport) / var(--variableLargeur));
     }
 
@@ -1642,7 +1640,7 @@ ul {
         top:calc(295 * var(--valeurViewport) / var(--variableLargeur));
        
         width:calc(322 * var(--valeurViewport) / var(--variableLargeur));
-        /* height:calc(77 * var(--valeurViewport) / var(--variableLargeur)); */
+       
         left:calc(34 * var(--valeurViewport) / var(--variableLargeur));
         left:50%;
         transform:translateX(-50%);
@@ -1743,22 +1741,20 @@ ul {
         width:100%;
         height:100%;
         font-size:calc(15 * var(--valeurViewport) / var(--variableLargeur));
-        /* font-family: var(--premiereFontFamily);
-        color:var(--PremiereCouleurTexte);
-        font-weight:normal; */
+      
     }
 
     .containerQuiSommesNous{
     
-        /* height:457.5px; */
+      
       
         height: calc(var(--hauteurQuiSommesNous) * var(--valeurViewport) / var(--variableLargeur));
        position:relative;
-        /* top: calc(815 * var(--valeurViewport) / var(--variableLargeur)); */
+      
  
-    }
+    } */
 
-    .containerQuiSommesNous .titreQuiSommesNous{
+    /* .containerQuiSommesNous .titreQuiSommesNous{
         position:absolute;
         top:calc(42 * var(--valeurViewport) / var(--variableLargeur));
         left:50%;
@@ -1808,9 +1804,9 @@ ul {
 
     .containerQuiSommesNous .boutonQuiSommesNous{
         position:absolute;
-        /* top:calc(8 * var(--valeurViewport) / var(--variableLargeur)); */
+
         bottom:calc(62.55 * var(--valeurViewport) / var(--variableLargeur));
-        /* top:calc(359 * var(--valeurViewport) / var(--variableLargeur)); */
+       
         left:50%;
         transform:translateX(-50%);
         width:calc(117 * var(--valeurViewport) / var(--variableLargeur));
@@ -1829,11 +1825,11 @@ ul {
         font-size:calc(15 * var(--valeurViewport) / var(--variableLargeur));
         cursor:pointer;
         font-weight:normal;
-    }
+    } */
 
     /*---------------------------PECHES TYPES----------------------*/
 
-    .pechesTypes{
+    /* .pechesTypes{
         height: calc(var(--hauteurPechesTypes) * var(--valeurViewport) / var(--variableLargeur));
         position:relative;
     }
@@ -1841,7 +1837,7 @@ ul {
     .pechesTypes .image1 img{
         position:absolute;
         top:calc(31 * var(--valeurViewport) / var(--variableLargeur));
-        /* left:55.7%; */
+      
         left:50%;
         transform:translateX(-50%);
         height: calc(434 * var(--valeurViewport) / var(--variableLargeur));
@@ -1855,15 +1851,11 @@ ul {
         height: calc(128 * var(--valeurViewport) / var(--variableLargeur));
         width:calc(295 * var(--valeurViewport) / var(--variableLargeur));
         top:calc(455.45 * var(--valeurViewport) / var(--variableLargeur));
-        /* top:calc( 455.45 / var(--variableLargeur) * 100%); */
-        /* left:56%; */
+       
         left:50%;
         background-color: var(--backgroundColor1);
       
        
-      
-        /* top:calc(464 * var(--valeurViewport) / var(--variableLargeur));
-        left: calc(22 * var(--valeurViewport) / var(--variableLargeur)); */
     
     }
     
@@ -1873,9 +1865,7 @@ ul {
         position:absolute;
         height: calc(96 * var(--valeurViewport) / var(--variableLargeur));
         width:calc(240 * var(--valeurViewport) / var(--variableLargeur));
-        /* color:var(--troisiemeCouleurTexte);
-        font-size:calc(30 * var(--valeurViewport) / var(--variableLargeur));
-        font-family:var(--deuxiemeFontFamily); */
+       
         top:calc(32 * var(--valeurViewport) / var(--variableLargeur));
         left:calc(33 * var(--valeurViewport) / var(--variableLargeur));
       
@@ -1908,11 +1898,11 @@ ul {
 
     .spanMediaQuerie span:nth-child(1){
         background-color:var(--troisiemeCouleurTexte) ;
-    }
+    }  */
 
     /*-------------------CONTAINER CARTE ----------------------- */
 
-    .containerCarte{
+    /* .containerCarte{
         height: calc(var(--hauteurCarte) * var(--valeurViewport) / var(--variableLargeur));
         position:relative;
         width:var(--variableLargeur);
@@ -2021,7 +2011,7 @@ ul {
         height: calc(567.2 * var(--valeurViewport) / var(--variableLargeur));
         top:calc(30 * var(--valeurViewport) / var(--variableLargeur));
         left:0;
-        /* background-color: var(--background-color2); */
+       
    
    }
 
@@ -2049,4 +2039,4 @@ ul {
 
    
     
-}
+} */
