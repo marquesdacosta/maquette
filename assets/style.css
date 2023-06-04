@@ -7,6 +7,9 @@
 
 :root{
     --variableLargeur:1920;
+
+  
+
     --hauteurDiaporama:943;
     --hauteurQuiSommesNous:457.5;
     --hauteurPechesTypes:784;
@@ -22,7 +25,7 @@
     --troisiemeFontFamily:'Asap Condensed', sans-serif;
     --quatriemeFontFamily:'Asap Condensed', sans-serif;
     --cinquiemeFontFamily:'Asap', sans-serif;
-    --fontSiza20px:calc(20 * 100vw / 1920);
+    --fontSiza20px:calc(20 * var(--valeurViewport) / var(--variableLargeur));
     --fontSize14px:calc(14 * var(--valeurViewport) / var(--variableLargeur));
     --PremiereCouleurTexte:#ffffff;
     --deuxiemeCouleurTexte:#4D4D4D;
@@ -33,6 +36,7 @@
     --backgroundColor4:#222222;
     --backgroundColor3:#333B1F;
     --backgroundColor5:#000000;
+    --lineHeight20px:calc(20 * var(--valeurViewport) / var(--variableLargeur));
    
  
 }
@@ -42,11 +46,10 @@
     padding:0;
     box-sizing:border-box;
     /* overflow:hidden; */
+ 
 }
 
-/* body{
-    width:1920px
-} */
+
 
 nav{
     /* height:100px; */
@@ -220,16 +223,19 @@ ul {
     left:calc(928 * var(--valeurViewport) / var(--variableLargeur));
     top:calc(628 / var(--hauteurDiaporama) * 100%);
     height:calc(43 / var(--hauteurDiaporama) * 100%);
+    /* left:calc(928 / var(--hauteurDiaporama) * 100%); */
    
 
 }
 
 .containerPlanDEauDiaporamaImage p{
+    position:absolute;
     font-family:var(--troisiemeFontFamily);
     text-transform:uppercase;
     color:var(--PremiereCouleurTexte);
     font-size:var(--fontSiza20px);
     line-height:calc(20 * var(--valeurViewport) / var(--variableLargeur));
+    font-weight:bold;
 
 }
 
@@ -250,6 +256,10 @@ ul {
     letter-spacing:calc(1.2px * var(--valeurViewport) / var(--variableLargeur));
 }
 
+.containerComplementInformationDiaporamaImageResponsive{
+    display:none;
+}
+
 .containerComplementInformationDiaporamaImage{
     position:absolute;
     width:calc(470 * var(--valeurViewport) / var(--variableLargeur));
@@ -257,6 +267,7 @@ ul {
     /* height:calc(62 / var(--hauteurDiaporama) * 100%); */
     left:50%;
     transform:translatex(-50%);
+    height:calc(62 * var(--valeurViewport) / var(--variableLargeur))
 }
 
 .containerComplementInformationDiaporamaImage p{
@@ -264,7 +275,7 @@ ul {
     color:var(--PremiereCouleurTexte);
     font-size:calc(16 * var(--valeurViewport) / var(--variableLargeur));
     line-height:calc(22 * var(--valeurViewport) / var(--variableLargeur));
-    font-family:var(--premiereFontFamily)
+    font-family:var(--premiereFontFamily);
 }
 
 .containerComplementInformationDiaporamaImage p:nth-child(1){
@@ -369,6 +380,10 @@ ul {
  
 }
 
+.containerPresentationDiaporamaImageResponsive{
+    display:none;
+}
+
 .containerTraitEtChiffreADroiteDiaporamaImage .trait1{
  
     display:block;
@@ -463,6 +478,7 @@ ul {
 
 
 .containerQuiSommesNous{
+    
     /* height:457.5px; */
     background-color:#F0EDE9;
     display:flex;
@@ -1508,6 +1524,529 @@ ul {
 
 /*----------------Media queries --------------------------*/
 
-@media screen and (max-width:700px){
 
+@media screen and (max-width:390px){
+
+    :root{
+        --variableLargeur:390;
+        --hauteurDiaporama:715;
+        --hauteurQuiSommesNous:460.55;
+        --hauteurPechesTypes:604.45;
+        --hauteurCarte:1596;
+    }
+
+    nav ul li a{
+        display:none;
+    }
+
+    nav ul .containerMenuHamberger{
+        position:absolute;
+        top:calc(40 * var(--valeurViewport)/ var(--variableLargeur));
+        left:calc(338.31 * var(--valeurViewport) / var(--variableLargeur));
+        width:calc(21.69 * var(--valeurViewport)/ var(--variableLargeur));
+        height:calc(20 * var(--valeurViewport)/ var(--variableLargeur))
+    }
+
+
+
+    nav ul li svg{
+        width:calc(84 * 100vw / var(--variableLargeur));
+        height:calc(70 * 100vw / var(--variableLargeur));
+        /* left:calc(19 * var(--valeurViewport) / var(--variableLargeur)); */
+    }
+
+    ul {
+        padding-left:calc(19 / var(--variableLargeur) * 100%);
+    } 
+
+    nav{
+        
+        height:calc(100 * var(--valeurViewport) / var(--variableLargeur)) ;
+    }
+
+    .containerMenuHamberger{
+        position:absolute;
+        /* top:0; */
+        top:calc(40 * var(--valeurViewport) / var(--variableLargeur));
+        left:calc(338.31 * var(--valeurViewport) / var(--variableLargeur));
+        width:calc(21.69 * var(--valeurViewport) / var(--variableLargeur));
+        height:calc(20 * var(--valeurViewport) / var(--variableLargeur));
+        cursor:pointer;
+    }
+
+    .containerMenuHamberger span:nth-child(1){
+        position:absolute;
+        width:100%;
+    
+        height:calc(4 * var(--valeurViewport) / var(--variableLargeur));
+        background-color:var(--backgroundColor4);
+    }
+
+    .containerMenuHamberger span:nth-child(2){
+        position:absolute;
+        top:calc(8 * var(--valeurViewport) / var(--variableLargeur));
+        width:100%;
+        height:calc(4 * var(--valeurViewport) / var(--variableLargeur));
+        background-color:var(--backgroundColor4);
+    }
+
+    .containerMenuHamberger span:nth-child(3){
+        position:absolute;
+        top:calc(16 * var(--valeurViewport) / var(--variableLargeur));
+        width:100%;
+        height:calc(4 * var(--valeurViewport) / var(--variableLargeur));
+        background-color:var(--backgroundColor4);
+    }
+
+    /************************** DIAPO ********************/
+    .containerHeaderImage{
+        /* height:100%; */
+        height: calc(var(--hauteurDiaporama) * var(--valeurViewport) / var(--variableLargeur));
+        /* top: calc(100 * var(--valeurViewport) / var(--variableLargeur)); */
+       
+       /* overflow-x:hidden; */
+      
+    }
+
+    /* .containerDiapo1{
+        background-image: url("img/visu_diaporama1@2x.png");
+        background-size: cover;
+    } */
+
+    .containerDiapo1{
+        height: calc(715 * var(--valeurViewport) / var(--variableLargeur));
+    }
+
+    .containerHeaderImage .containerDiapo1 img{
+        height:100%;
+    }
+
+    .containerDiapo1 .containerH2DiaporamaImage{
+        position:absolute;
+        top:calc(170 * var(--valeurViewport) / var(--variableLargeur));
+       
+        width:calc(224 * var(--valeurViewport) / var(--variableLargeur));
+        height:calc(112 * var(--valeurViewport) / var(--variableLargeur));
+      
+    }
+
+    .containerDiapo1 .containerH2DiaporamaImage h2{
+        white-space:normal;
+        font-size:calc(44 * var(--valeurViewport) / var(--variableLargeur));
+        text-align:center;
+    }
+
+    .containerPresentationDiaporamaImageResponsive{
+        display: block;
+        position:absolute;
+        top:calc(295 * var(--valeurViewport) / var(--variableLargeur));
+       
+        width:calc(322 * var(--valeurViewport) / var(--variableLargeur));
+        /* height:calc(77 * var(--valeurViewport) / var(--variableLargeur)); */
+        left:calc(34 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%);
+        font-size:calc(18 * var(--valeurViewport) / var(--variableLargeur));
+        line-height:calc(28 * var(--valeurViewport) / var(--variableLargeur)) ;
+        font-family: var(--premiereFontFamily);
+        color:var(--PremiereCouleurTexte);
+        text-align:center;
+    }
+
+    .containerPresentationDiaporamaImageResponsive p{
+        position:absolute;
+        width:100%;
+        height:100%;
+
+    }
+
+    .containerPlanDEauDiaporamaImage{
+        position:absolute;
+        top:calc(436 * var(--valeurViewport) / var(--variableLargeur));
+        left:calc(171 * var(--valeurViewport) / var(--variableLargeur));
+        width:calc(67 * var(--valeurViewport) / var(--variableLargeur));
+        height:calc(32 * var(--valeurViewport) / var(--variableLargeur));
+    }
+
+    .containerPlanDEauDiaporamaImage p{
+        position:absolute;
+        font-size: calc(15 * var(--valeurViewport) / var(--variableLargeur));
+        line-height: calc(15 * var(--valeurViewport) / var(--variableLargeur));
+        font-weight:bold;
+    }
+
+    .containerNomVilleDiaporamaImage{
+        position:absolute;
+        top:calc(469 * var(--valeurViewport) / var(--variableLargeur));
+        left:calc(171 * var(--valeurViewport) / var(--variableLargeur));
+        width:calc(89 * var(--valeurViewport) / var(--variableLargeur));
+        height:calc(10 * var(--valeurViewport) / var(--variableLargeur));
+    }
+
+    .containerNomVilleDiaporamaImage p{
+        position:absolute;
+        width:100%;
+        height:100%;
+        font-size:calc(9 * var(--valeurViewport) / var(--variableLargeur));
+        letter-spacing: 0.9px;
+        line-height: calc(9 * var(--valeurViewport) / var(--variableLargeur));
+    }
+
+    .containerComplementInformationDiaporamaImageResponsive{
+        display:block;
+        position:absolute;
+        top:calc(498 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%);
+        width:calc(286 / var(--variableLargeur) * 100%);
+        height:calc(76 * var(--valeurViewport) / var(--variableLargeur));
+        text-align:center;
+       
+    }
+
+    .containerComplementInformationDiaporamaImageResponsive p:nth-child(1){
+     
+        color:var(--PremiereCouleurTexte);
+        font-weight:bold;
+        font-size:var(--fontSize14px);
+        font-family:var(--premiereFontFamily);
+        line-height:var(--lineHeight20px);
+        
+       
+    }
+
+    .containerComplementInformationDiaporamaImageResponsive p:nth-child(2),
+    .containerComplementInformationDiaporamaImageResponsive p:nth-child(3),
+    .containerComplementInformationDiaporamaImageResponsive p:nth-child(4)
+    {
+       
+        color:var(--PremiereCouleurTexte);
+        line-height:var(--lineHeight20px);
+        font-size:var(--fontSize14px);
+        white-space: nowrap;
+       
+       
+        
+    }
+
+    .containerBoutonDiaporamaImage{
+        position:absolute;
+        top:calc(599 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%);
+        width:calc(115 * var(--valeurViewport) / var(--variableLargeur));
+        height:calc(38 * var(--valeurViewport) / var(--variableLargeur));
+    }
+
+    .containerBoutonDiaporamaImage button{
+        position:absolute;
+        width:100%;
+        height:100%;
+        font-size:calc(15 * var(--valeurViewport) / var(--variableLargeur));
+        /* font-family: var(--premiereFontFamily);
+        color:var(--PremiereCouleurTexte);
+        font-weight:normal; */
+    }
+
+    .containerQuiSommesNous{
+    
+        /* height:457.5px; */
+      
+        height: calc(var(--hauteurQuiSommesNous) * var(--valeurViewport) / var(--variableLargeur));
+       position:relative;
+        /* top: calc(815 * var(--valeurViewport) / var(--variableLargeur)); */
+ 
+    }
+
+    .containerQuiSommesNous .titreQuiSommesNous{
+        position:absolute;
+        top:calc(42 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%);
+        width:calc(314 * var(--valeurViewport) / var(--variableLargeur));
+        height:calc(93 * var(--valeurViewport) / var(--variableLargeur));
+       
+    }
+
+    .containerQuiSommesNous .titreQuiSommesNous h2{
+     
+        text-shadow: 10px 10px 20px #00000029;
+        text-shadow:calc(10 * var(--valeurViewport) / var(--variableLargeur)) calc(10 * var(--valeurViewport) / var(--variableLargeur)) calc(20 * var(--valeurViewport) / var(--variableLargeur))
+        #00000029;
+        font-size:calc(30 * var(--valeurViewport) / var(--variableLargeur));
+        line-height: calc(54 * var(--valeurViewport) / var(--variableLargeur));
+       
+    }
+    .containerQuiSommesNous .titreQuiSommesNous p{
+
+        width:calc(306 * var(--valeurViewport) / var(--variableLargeur));
+        height:calc(42 * var(--valeurViewport) / var(--variableLargeur));
+        font-size:var(--fontSize14px);
+        white-space: normal;
+        line-height: calc(26 * var(--valeurViewport) / var(--variableLargeur));
+    }
+
+    .containerQuiSommesNous .paragrapheQuiSommesNous{
+        position:absolute;
+        top:calc(178 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%);
+        width:calc(330 * var(--valeurViewport) / var(--variableLargeur));
+        height:calc(173 * var(--valeurViewport) / var(--variableLargeur));
+    }
+
+    .containerQuiSommesNous .paragrapheQuiSommesNous p{
+        position:absolute;
+        font-size:calc(18 * var(--valeurViewport) / var(--variableLargeur));
+        font-family: var(--premiereFontFamily);
+        color:var(--deuxiemeCouleurTexte);
+        text-align:center;
+        line-height: calc(21 * var(--valeurViewport) / var(--variableLargeur));
+        width:100%;
+        height:100%;
+    }
+
+    .containerQuiSommesNous .boutonQuiSommesNous{
+        position:absolute;
+        /* top:calc(8 * var(--valeurViewport) / var(--variableLargeur)); */
+        bottom:calc(62.55 * var(--valeurViewport) / var(--variableLargeur));
+        /* top:calc(359 * var(--valeurViewport) / var(--variableLargeur)); */
+        left:50%;
+        transform:translateX(-50%);
+        width:calc(117 * var(--valeurViewport) / var(--variableLargeur));
+        height:calc(39 * var(--valeurViewport) / var(--variableLargeur));
+    }
+
+    .containerQuiSommesNous .boutonQuiSommesNous button{
+        position:absolute;
+        width:100%;
+        height:100%;
+        color:var(--troisiemeCouleurTexte);
+        background-color:transparent;
+        box-shadow: none;
+        border:1px solid var(--troisiemeCouleurTexte);
+        font-family:var(--premiereFontFamily);
+        font-size:calc(15 * var(--valeurViewport) / var(--variableLargeur));
+        cursor:pointer;
+        font-weight:normal;
+    }
+
+    /*---------------------------PECHES TYPES----------------------*/
+
+    .pechesTypes{
+        height: calc(var(--hauteurPechesTypes) * var(--valeurViewport) / var(--variableLargeur));
+        position:relative;
+    }
+
+    .pechesTypes .image1 img{
+        position:absolute;
+        top:calc(31 * var(--valeurViewport) / var(--variableLargeur));
+        /* left:55.7%; */
+        left:50%;
+        transform:translateX(-50%);
+        height: calc(434 * var(--valeurViewport) / var(--variableLargeur));
+        width:calc(329 * var(--valeurViewport) / var(--variableLargeur));
+        object-fit: cover;
+         
+    }
+    
+
+    .pechesTypes .image1 .presentationImage1{
+        height: calc(128 * var(--valeurViewport) / var(--variableLargeur));
+        width:calc(295 * var(--valeurViewport) / var(--variableLargeur));
+        top:calc(455.45 * var(--valeurViewport) / var(--variableLargeur));
+        /* top:calc( 455.45 / var(--variableLargeur) * 100%); */
+        /* left:56%; */
+        left:50%;
+        background-color: var(--backgroundColor1);
+      
+       
+      
+        /* top:calc(464 * var(--valeurViewport) / var(--variableLargeur));
+        left: calc(22 * var(--valeurViewport) / var(--variableLargeur)); */
+    
+    }
+    
+    
+    
+    .pechesTypes .image .presentation h3{
+        position:absolute;
+        height: calc(96 * var(--valeurViewport) / var(--variableLargeur));
+        width:calc(240 * var(--valeurViewport) / var(--variableLargeur));
+        /* color:var(--troisiemeCouleurTexte);
+        font-size:calc(30 * var(--valeurViewport) / var(--variableLargeur));
+        font-family:var(--deuxiemeFontFamily); */
+        top:calc(32 * var(--valeurViewport) / var(--variableLargeur));
+        left:calc(33 * var(--valeurViewport) / var(--variableLargeur));
+      
+    }
+    
+    .pechesTypes .image .presentation h3 p{
+        overflow-wrap:break-word
+    } 
+
+    .spanMediaQuerie{
+        position: absolute;
+        top:calc(561 * var(--valeurViewport) / var(--variableLargeur));
+        height: calc(10 * var(--valeurViewport) / var(--variableLargeur));
+        width:calc(70 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%);
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .spanMediaQuerie span{
+        display:block;
+        width:calc(10 * var(--valeurViewport) / var(--variableLargeur));
+        height: calc(10 * var(--valeurViewport) / var(--variableLargeur));
+        border-radius:50%;
+       
+        border:1px solid var(--troisiemeCouleurTexte)
+      
+    }
+
+    .spanMediaQuerie span:nth-child(1){
+        background-color:var(--troisiemeCouleurTexte) ;
+    }
+
+    /*-------------------CONTAINER CARTE ----------------------- */
+
+    .containerCarte{
+        height: calc(var(--hauteurCarte) * var(--valeurViewport) / var(--variableLargeur));
+        position:relative;
+        width:var(--variableLargeur);
+        background-color: transparent;
+        
+      
+    }
+    .blocDeGauche{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100vw;
+        background-color: var(--troisiemeCouleurTexte);
+        z-index: -1;
+    }
+    .containerCarte .carteDeFrance{
+        position:absolute;
+        width:calc(190 * var(--valeurViewport) / var(--variableLargeur));
+        height: calc(190 * var(--valeurViewport) / var(--variableLargeur));
+        top:calc(23.38 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%)
+       
+       
+    }
+
+    .containerCarte .explication{
+        position:absolute;
+        width:calc(294 * var(--valeurViewport) / var(--variableLargeur));
+        height: calc(94 * var(--valeurViewport) / var(--variableLargeur));
+        top:calc(231.76 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%)
+    }
+
+    .containerCarte .explication h3{
+     font-size:calc(16 * var(--valeurViewport) / var(--variableLargeur));
+   }
+
+   .containerCarte .explication p{
+        font-size:calc(16 * var(--valeurViewport) / var(--variableLargeur));
+        white-space: wrap;
+        line-height: calc(18 * var(--valeurViewport) / var(--variableLargeur));
+   }
+
+   .containerCarte .logo svg{
+        position:absolute;
+        width:calc(77.26 * var(--valeurViewport) / var(--variableLargeur));
+        height: calc(89.2 * var(--valeurViewport) / var(--variableLargeur));
+        top:calc(341.34 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%);
+        margin-top: 0;
+       
+   }
+
+   .containerCarte .BoutonVoirGoogleMap {
+        z-index:100;
+        position:absolute;
+        width:calc(183 * var(--valeurViewport) / var(--variableLargeur));
+        height: calc(39 * var(--valeurViewport) / var(--variableLargeur));
+        top:calc(-50 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%);
+   }
+
+   .containerCarte .BoutonVoirGoogleMap button{
+      
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        font-size:calc(15 * var(--valeurViewport) / var(--variableLargeur));
+
+   }
+
+   .containerCarte .containerDroit{
+     position:absolute;
+     width:var(--variableLargeur);
+     height: calc(507 * var(--valeurViewport) / var(--variableLargeur));
+     top:calc(518 * var(--valeurViewport) / var(--variableLargeur));
+     left:0
+   }
+
+   .containerCarte .containerDroit img{
+   
+     height:100%;
+     width:100%;
+   }
+
+   .containerCarte .imageLieu{
+        position:absolute;
+        width:calc(330 * var(--valeurViewport) / var(--variableLargeur));
+        height: calc(238 * var(--valeurViewport) / var(--variableLargeur));
+        top:calc(1025.05 * var(--valeurViewport) / var(--variableLargeur));
+        left:50%;
+        transform:translateX(-50%);
+        margin-top:0;
+     
+   }
+
+   .containerCarte .imageLieu .texte{
+        position:absolute;
+        width:var(--variableLargeur);
+        height: calc(567.2 * var(--valeurViewport) / var(--variableLargeur));
+        top:calc(30 * var(--valeurViewport) / var(--variableLargeur));
+        left:0;
+        /* background-color: var(--background-color2); */
+   
+   }
+
+   .containerCarte .imageLieu img{
+        position:absolute;
+        width:var(--variableLargeur);
+        top:calc(302 * var(--valeurViewport) / var(--variableLargeur));
+        height: calc(269 * var(--valeurViewport) / var(--variableLargeur));
+        left:calc(-30 * var(--valeurViewport) / var(--variableLargeur));;
+      
+      
+   }
+
+  
+
+ .containerFooter1,.containerFooter2,.containerActualites,
+    .containerBlog,.containerSponsor,
+    .containerTraitEtChiffreADroiteDiaporamaImage,
+    .containerSvgFlecheDroiteDiaporamaImage,
+    .containerSvgFlecheGaucheDiaporamaImage
+    ,.containerComplementInformationDiaporamaImage,
+    .containerPresentationDiaporamaImage,.image2,.image3,.image4{
+        display:none;
+    }
+
+   
+    
 }
