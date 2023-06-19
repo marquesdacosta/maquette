@@ -58,7 +58,7 @@ nav{
     position:sticky;
     top:0;
     left:0;
-    z-index:6;
+    z-index:999;
     background-color: var(--PremiereCouleurTexte);
 
    
@@ -602,19 +602,19 @@ ul {
     font-family:var(--premiereFontFamily);
     font-size:var(--fontSiza20px);
     cursor:pointer;
-
+    z-index:9;
     overflow:hidden;
 }
 
-/* .boutonQuiSommesNous button:before{
-    content:"EN SAVOIR +";
+.boutonQuiSommesNous button:before{
+    content:"";
     position:absolute;
     top:0;
     left:0;
     width:100%;
     height:100%;
     transform:translateX(-100%);
-   
+   z-index:-1;
     background-color:var(--troisiemeCouleurTexte);
     transition:transform 0.5s;
     display:flex;
@@ -630,16 +630,16 @@ ul {
 
 .boutonQuiSommesNous button:hover{
    
-    color:transparent;
-    color:var(--deuxiemeCouleurTexte)
-} */
+ 
+    color:var(--PremiereCouleurTexte)
+}
 
 .pechesTypes{
     height: calc(var(--hauteurPechesTypes) * var(--valeurViewport) / var(--variableLargeur));
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:calc(38 * var(--valeurViewport) / var(--variableLargeur));
+    /* gap:calc(38 * var(--valeurViewport) / var(--variableLargeur)); */
 
 
 }
@@ -657,8 +657,15 @@ ul {
     
     width:100%;
     object-fit: cover;
-   
+    padding-left:calc(38 * var(--valeurViewport) / var(--variableLargeur));
+    transition:transform 0.5s
 }
+
+.pechesTypes .image img:hover{
+    transform:scale(1.1)
+}
+
+
 
 .pechesTypes .image .presentation{
     height: calc(160 * var(--valeurViewport) / var(--variableLargeur));
