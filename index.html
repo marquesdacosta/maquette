@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
     
@@ -38,7 +39,10 @@
         </nav>
         <div class="containerHeaderImage">
             <div class="containerDiapo1">
-                <img class="diaporamaImage" src="assets/img/visu_diaporama1@2x.png" alt="image">
+               <img class="diaporamaImage" src="assets/img/diaporama2.jpg" alt="image">
+               <img class="diaporamaImage active" src="assets/img/visu_diaporama1@2x.png" alt="image"> 
+               <img class="diaporamaImage" src="assets/img/diaporama3.png" alt="image">
+                <img class="diaporamaImage" src="assets/img/diaporama4.jpg" alt="image">
                 <div class="containerH2DiaporamaImage">
                     <h2>La pêche au silure</h2>
                 </div>
@@ -73,34 +77,40 @@
                 </div>
 
                 <div class="containerSvgFlecheGaucheDiaporamaImage">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 53 53">
-                        <g id="Groupe_4297" data-name="Groupe 4297" transform="translate(-54.5 -3447.5)">
-                          <g id="Groupe_4238" data-name="Groupe 4238" transform="translate(23.865 3415.363)">
-                            <circle id="Ellipse_2" data-name="Ellipse 2" cx="26" cy="26" r="26" transform="translate(31.135 32.637)" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="1"/>
-                            <path id="Tracé_16173" data-name="Tracé 16173" d="M111.179,92,104,98.461l7.179,6.461" transform="translate(-50.865 -40.363)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                          </g>
-                        </g>
-                      </svg>
+                    <a href="#" class="precedent">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 53 53">
+                            <g id="Groupe_4297" data-name="Groupe 4297" transform="translate(-54.5 -3447.5)">
+                              <g id="Groupe_4238" data-name="Groupe 4238" transform="translate(23.865 3415.363)">
+                                <circle id="Ellipse_2" data-name="Ellipse 2" cx="26" cy="26" r="26" transform="translate(31.135 32.637)" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="1"/>
+                                <path id="Tracé_16173" data-name="Tracé 16173" d="M111.179,92,104,98.461l7.179,6.461" transform="translate(-50.865 -40.363)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                              </g>
+                            </g>
+                          </svg>
+                    </a>
+                   
                 </div>
 
                 <div class="containerSvgFlecheDroiteDiaporamaImage">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 53 53">
-                        <g id="Groupe_4298" data-name="Groupe 4298" transform="translate(-1812.5 -3447.5)">
-                          <g id="Groupe_4239" data-name="Groupe 4239" transform="translate(1813 3448)">
-                            <circle id="Ellipse_2" data-name="Ellipse 2" cx="26" cy="26" r="26" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="1"/>
-                            <path id="Tracé_16173" data-name="Tracé 16173" d="M104,92l7.179,6.461L104,104.922" transform="translate(-81.179 -73)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                          </g>
-                        </g>
-                      </svg>
+                    <a href="#" class="suivant">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 53 53">
+                            <g id="Groupe_4298" data-name="Groupe 4298" transform="translate(-1812.5 -3447.5)">
+                              <g id="Groupe_4239" data-name="Groupe 4239" transform="translate(1813 3448)">
+                                <circle id="Ellipse_2" data-name="Ellipse 2" cx="26" cy="26" r="26" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="1"/>
+                                <path id="Tracé_16173" data-name="Tracé 16173" d="M104,92l7.179,6.461L104,104.922" transform="translate(-81.179 -73)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                              </g>
+                            </g>
+                          </svg>
+                    </a>
+                  
                       
                 </div>
 
                 <div class="containerTraitEtChiffreADroiteDiaporamaImage">
                     <span class="trait1"></span>
-                    <span class="chiffre1">1</span>
-                    <span class="chiffre2">2</span>
-                    <span class="chiffre3">3</span>
-                    <span class="chiffre4">4</span>
+                    <a href="#" class=" chiffre chiffreA1" data-chiffre="1"><span class="chiffreSpan chiffre1">1</span></a>
+                    <a href="#" class="chiffre chiffreA2" data-chiffre="2"><span class="chiffreSpan chiffre2 active">2</span></a>
+                    <a href="#" class=" chiffre chiffreA3" data-chiffre="3"><span class="chiffreSpan chiffre3">3</span></a>
+                    <a href="#" class="chiffre chiffreA4" data-chiffre="4"><span class="chiffreSpan chiffre4">4</span></a>
                     <span class="trait2"></span>
 
                 </div>

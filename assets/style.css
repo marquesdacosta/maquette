@@ -153,14 +153,29 @@ ul {
 .containerDiapo1{
     height:100%;
     position:relative;
-    
+    overflow:hidden;
 }
 
-.containerHeaderImage .diaporamaImage{
+.containerHeaderImage .diaporamaImage.active{
     /* height:var(--hauteurDiaporama); */
+    display:block;
     object-fit: cover;
     width:100%;
    
+   
+}
+
+.containerHeaderImage .containerDiapo1 img:nth-of-type(1).active,
+.containerHeaderImage .containerDiapo1 img:nth-of-type(3).active,
+.containerHeaderImage .containerDiapo1 img:nth-of-type(4).active{
+    filter:brightness(0.6);
+}
+
+.containerHeaderImage .diaporamaImage{
+    display:none;
+   
+
+
 }
 
 /* .diaporamaImage{
@@ -181,6 +196,8 @@ ul {
    
    
 }
+
+
 
 .containerDiapo1 h2{
    
@@ -345,6 +362,10 @@ ul {
     height:calc(52 / var(--hauteurDiaporama) * 100%)
 }
 
+.containerSvgFlecheGaucheDiaporamaImage a{
+    position:absolute;
+}
+
 .containerSvgFlecheGaucheDiaporamaImage svg{
     width:100%;
     height:100%;
@@ -358,6 +379,10 @@ ul {
     top:calc(817.5 / var(--hauteurDiaporama) * 100%);
     width:calc(52 * var(--valeurViewport) / var(--variableLargeur));
     height:calc(52 / var(--hauteurDiaporama) * 100%)
+}
+
+.containerSvgFlecheDroiteDiaporamaImage a{
+    position:absolute;
 }
 
 .containerSvgFlecheDroiteDiaporamaImage svg{
@@ -376,8 +401,10 @@ ul {
     width:calc(16 * var(--valeurViewport) / var(--variableLargeur));
     height:calc(344 * var(--valeurViewport) / var(--variableLargeur));
    
-   
- 
+}
+
+.containerTraitEtChiffreADroiteDiaporamaImage a{
+    text-decoration:none;
 }
 
 .containerPresentationDiaporamaImageResponsive{
@@ -426,8 +453,10 @@ ul {
     font-size:calc(30 * var(--valeurViewport) / var(--variableLargeur));
     /* line-height:calc(72 * var(--valeurViewport) / var(--variableLargeur)); */
     margin-bottom:calc(14.5 * var(--valeurViewport) / var(--variableLargeur));
-    color:var(--troisiemeCouleurTexte);
+   
 }
+
+
 
 .containerTraitEtChiffreADroiteDiaporamaImage .chiffre3{
    
@@ -469,10 +498,18 @@ ul {
     margin:auto;
 }
 
-.containerTraitEtChiffreADroiteDiaporamaImage .chiffre1,.containerTraitEtChiffreADroiteDiaporamaImage .chiffre3,.containerTraitEtChiffreADroiteDiaporamaImage .chiffre4
-{
+.containerTraitEtChiffreADroiteDiaporamaImage .chiffreSpan.active{
+    color:var(--troisiemeCouleurTexte);
+}
+
+.containerTraitEtChiffreADroiteDiaporamaImage .chiffreSpan{
     color:var(--PremiereCouleurTexte)
 }
+
+/* .containerTraitEtChiffreADroiteDiaporamaImage .chiffre1,.containerTraitEtChiffreADroiteDiaporamaImage .chiffre3,.containerTraitEtChiffreADroiteDiaporamaImage .chiffre4
+{
+    color:var(--PremiereCouleurTexte)
+} */
 
 /*-------------------------------Qui Sommes nous-------------------------------*/
 
