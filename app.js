@@ -5,17 +5,48 @@ let count=1;
 let nombreImages=images.length;
 let interval;
 const chiffres=document.querySelectorAll(".chiffre");
-const elChiffreSpan=document.querySelectorAll('.chiffreSpan')
+const elChiffreSpan=document.querySelectorAll('.chiffreSpan');
+const elRecuperationContainerH2DiaporamaImage=document.querySelector(".containerH2DiaporamaImage")
+const elRecuperationH2DiaporamaImage=document.querySelectorAll(".h2DiaporamaImage");
+const recuperationDivFlecheRemonterFooter=document.querySelector(".containerFlecheRemonterFooter")
+
 
 precedent.addEventListener("click",(e)=>{
     e.preventDefault();
     count--;
-  
+
     if(count<0){
-         count=nombreImages-1;
+        count=nombreImages-1;
     }
+  
+    if(count===0){
+        elRecuperationContainerH2DiaporamaImage.style.left='48%'
+    }
+
+    if(count===1){
+        elRecuperationContainerH2DiaporamaImage.style.left='50%'
+        elRecuperationContainerH2DiaporamaImage.style.top='calc(286 / var(--hauteurDiaporama) * 100%)';
+        elRecuperationH2DiaporamaImage[count].style.whiteSpace='nowrap';
+    }
+
+    if(count===2){
+        elRecuperationH2DiaporamaImage[count].style.textAlign='center';
+        elRecuperationH2DiaporamaImage[count].style.whiteSpace='wrap';
+        elRecuperationContainerH2DiaporamaImage.style.top='calc(140 / var(--hauteurDiaporama) * 100%)';
+        elRecuperationContainerH2DiaporamaImage.style.left='50%'
+    }
+
+    if(count===3){
+        elRecuperationContainerH2DiaporamaImage.style.left='50%';
+        elRecuperationH2DiaporamaImage[count].style.whiteSpace='nowrap';
+        elRecuperationH2DiaporamaImage[count].style.textAlign="center";
+        elRecuperationContainerH2DiaporamaImage.style.top='calc(286 / var(--hauteurDiaporama) * 100%)'
+    }
+
     removeActive();
     enleverChiffreSpan();
+    enleverH2Active();
+    elRecuperationH2DiaporamaImage[count].classList.add("active")
     images[count].classList.add("active");
     elChiffreSpan[count].classList.add('active');   
 
@@ -27,10 +58,47 @@ suivant.addEventListener('click',(e)=>{
     if(count>nombreImages-1){
         count=0;
     }
+
+    
+    if(count===0){
+        elRecuperationContainerH2DiaporamaImage.style.left='48%'
+    }
+
+    if(count===1){
+        elRecuperationContainerH2DiaporamaImage.style.left='50%'
+        elRecuperationContainerH2DiaporamaImage.style.top='calc(286 / var(--hauteurDiaporama) * 100%)';
+        elRecuperationH2DiaporamaImage[count].style.whiteSpace='nowrap';
+    }
+
+    if(count===2){
+        elRecuperationH2DiaporamaImage[count].style.textAlign='center';
+        elRecuperationH2DiaporamaImage[count].style.whiteSpace='wrap';
+        elRecuperationContainerH2DiaporamaImage.style.top='calc(140 / var(--hauteurDiaporama) * 100%)';
+        elRecuperationContainerH2DiaporamaImage.style.left='50%'
+    }
+
+    if(count===3){
+        elRecuperationContainerH2DiaporamaImage.style.left='50%';
+        elRecuperationH2DiaporamaImage[count].style.whiteSpace='nowrap';
+        elRecuperationH2DiaporamaImage[count].style.textAlign="center";
+        elRecuperationContainerH2DiaporamaImage.style.top='calc(286 / var(--hauteurDiaporama) * 100%)'
+    }
+  
     removeActive();
     enleverChiffreSpan();
+    enleverH2Active();
+    elRecuperationH2DiaporamaImage[count].classList.add("active")
     images[count].classList.add("active");
     elChiffreSpan[count].classList.add('active');
+   
+})
+
+recuperationDivFlecheRemonterFooter.addEventListener('click',()=>{
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+
+    })
 })
 
 function removeActive(){
@@ -42,6 +110,12 @@ function removeActive(){
 function enleverChiffreSpan(){
     for(i=0;i<elChiffreSpan.length;i++){
         elChiffreSpan[i].classList.remove('active')
+    }
+}
+
+function enleverH2Active(){
+    for(i=0;i<elRecuperationH2DiaporamaImage.length;i++){
+        elRecuperationH2DiaporamaImage[i].classList.remove('active')
     }
 }
 
